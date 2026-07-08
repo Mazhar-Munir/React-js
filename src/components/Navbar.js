@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   return (
+    // <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+    // navbar ko dark karny ka liaa
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
+     {/* navbar ko light mood karny ka liaa */}
   <div className="container-fluid">
     <a className="navbar-brand" href="/">{props.title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,14 +27,15 @@ export default function Navbar(props) {
       </form>
     </div>
   </div>
+
 </nav>
   )
 }
 
-Navbar.propTypes = { title: PropTypes.string,
-                    aboutText: PropTypes.string,}
+Navbar.propTypes = { title: PropTypes.string.isRequired,
+                    aboutText: PropTypes.string.isRequired,}
 
 Navbar.defaultProps = {
   title: 'set title here',
-  aboutText: 'set about text here'
+  aboutText: 'About'
 }
